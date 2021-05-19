@@ -1,0 +1,196 @@
+/*SLIDER*/
+.slide-contenedor{
+    padding-top: 4.5rem;
+}
+
+.slide-contenedor{
+    max-width: 100%;
+    max-height: 100vh;
+    width: 90%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+
+/*.miSlider{
+    display: none;
+    transition: 2s;
+    max-height: 100vh;
+}*/
+
+.miSlider img{
+    width: 100%;
+    max-height: 100vh;
+    height: inherit;
+    object-fit: cover;
+    vertical-align: top;
+    transition: 2s;
+}
+
+.direcciones{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    /*para que las flechas este posicionadas*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.direcciones a{
+    color: white;
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.direcciones a:hover{
+    background: rgba(0, 0, 0, .5);
+    transition: .5s;
+}
+
+.barras{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.barra{
+    cursor: pointer;
+    height: 2px;
+    width: 25px;
+    margin: 0 2px;
+    background: #dcdde1;
+    display: inline-block;
+    margin-left: 3px;
+}
+
+.active{
+    background-color: #e74c3c;
+}
+
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from{opacity: .4;}
+    to{opacity: 1;}   
+}
+
+/*MAIN*/
+
+.contenedor-slogan{
+    margin-top: 6px;
+    padding: 50px;
+    text-align: center;
+}
+
+.contenedor-slogan span{
+    font-size: 50px;
+    color: black;
+    font-weight: 650;
+}
+
+.contenedor-slogan__importante{
+    border-bottom: .13em solid yellow; /*siempre lleva el solid*/
+}
+
+/*--Presentacion--*/
+.presentacion{
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 40px;
+}
+
+.presentacion p{
+    font-size: 18px;
+}
+
+/*--Clientes--*/
+.contenedor-clientes{
+    margin-top: 6px;
+    text-align: center;
+}
+
+.contenedor-clientes h2{
+    font-size: 30px;
+    color: black;
+    font-weight: 650;
+    margin: 20px;
+}
+
+.contenedor-clientes p{
+    margin-bottom: 20px;
+}
+.contenedor-prueba {
+  align-items: center;
+  display: flex;
+  padding: 2em;
+}
+
+
+.slider-clientes {
+  background: white;
+ /* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);*/
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 960px;
+}
+
+.slider-clientes .slide-track-clientes {
+  -webkit-animation: scroll 20s linear infinite ;
+          animation: scroll 20s linear infinite ;
+          animation-timing-function: linear;
+  display: flex;
+  width: calc(250px * 10);
+}
+
+.img-clientes{
+  width: 130px;
+  align-self: center;
+}
+
+.img-clientes img{
+  display: block;
+  margin: auto;
+  width: 65%;/*de la caja*/
+  height: auto;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+
+  to{
+    width: 100%;
+  }
+}
+
+
+/*-------MEDIA QUERIES-----*/
+@media (max-width:800px){/*osea de 768 hacia abajo*/
+    main{
+        font-size: -20px;
+    }
+    .slide-contenedor{
+        display: none;
+    }
+
+    .contenedor-slogan{
+        margin-top: 30px;
+    }
+}
